@@ -25,3 +25,6 @@ jobs:
           milliseconds: 1000
           env: "prod"
           path: "dist"
+          ZENDESK_SUBDOMAIN: "sejadigitalf21648233634"
+          ZENDESK_API_TOKEN: "Qo4KjW6PAjMWNHw9q2gjjyI9JcJTF9ImY9a4Dvbg"
+          ZENDESK_EMAIL: "maria.pereira@eteg.com.br"
