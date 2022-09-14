@@ -46,8 +46,8 @@ async function run() {
       await exec.exec(`zcli apps:update ${path}`);
     }
     else {
-      shell.echo(`🚀 Deploying a new application...`);
-      await exec.exec(`zcli apps:create ${path}`);
+      shell.echo(`🚀 Deploying a new application....`);
+      await exec.exec(`zcli apps:create ${path} && mv ${path}/zcli.apps.config.json ./`);
     }
 
     shell.echo(`🎉 Job has been finished`);
