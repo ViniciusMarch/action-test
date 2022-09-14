@@ -1,0 +1,28 @@
+{
+  "name": "app-mt-deploy",
+  "author": {
+    "name": "MT - Pipeline",
+    "email": "dev-zendesk@eteg.com.br",
+    "url": "https://www.pipeline.com.br"
+  },
+  "defaultLocale": "en",
+  "private": true,
+  "location": {
+    "support": {
+      "ticket_sidebar": {
+        "url": "http://localhost:3000",
+        "flexible": true
+      }
+    }
+  },
+  "version": "1.0.0",
+  "frameworkVersion": "2.0",
+  "parameters": [
+    {
+      "name": "pou",
+      "type": "text",
+      "secure": true,
+      "required": true
+    }
+  ]
+}
