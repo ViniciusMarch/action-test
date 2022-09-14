@@ -17,12 +17,5 @@
   },
   "version": "1.0.0",
   "frameworkVersion": "2.0",
-  "parameters": [
-    {
-      "name": "pou",
-      "type": "text",
-      "secure": true,
-      "required": true
-    }
-  ]
+  "parameters": []
 }
