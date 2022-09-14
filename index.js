@@ -34,7 +34,7 @@ async function run() {
     await exec.exec('npm install yarn --location=global');
     await exec.exec('npm install typescript --location=global');
    
-    shell.echo(`🔎 Building & Validating.....rr.....`);
+    shell.echo(`🔎 Building & Validating....sa.rr.....`);
     await exec.exec('yarn install');
     shell.echo(`🔎 3123213213...`);
 

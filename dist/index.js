@@ -18195,13 +18195,15 @@ async function run() {
     await exec.exec('npm install yarn --location=global');
     await exec.exec('npm install typescript --location=global');
    
-    shell.echo(`🔎 Building & Validating...`);
+    shell.echo(`🔎 Building & Validating....sa.rr.....`);
     await exec.exec('yarn install');
-    await exec.exec(`yarn --cwd ${path} build:${env}`);
-    await exec.exec(`zcli apps:validate ${path}`);
+    shell.echo(`🔎 3123213213...`);
 
+    await exec.exec(`yarn --cwd ${path} build:${env}`);
+    shell.echo(`🔎 TEEESTE...`);
     if(fs.existsSync(`${path}/zcli.apps.config.json`)) {
       shell.echo(`🚀 Deploying an existing application...`);
+      await exec.exec(`zcli apps:validate ${path}`);
       await exec.exec(`zcli apps:update ${path}`);
     }
     else {
