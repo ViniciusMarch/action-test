@@ -13,18 +13,6 @@ inputs:
     description: "milliseconds"
     required: true
     default: 1000
-  ZENDESK_SUBDOMAIN:
-    description: "ZENDESK_SUBDOMAIN"
-    required: true
-    default: "sejadigitalf21648233634"
-  ZENDESK_API_TOKEN:
-    description: "ZENDESK_API_TOKEN"
-    required: true
-    default: "Qo4KjW6PAjMWNHw9q2gjjyI9JcJTF9ImY9a4Dvbg"
-  ZENDESK_EMAIL:
-    description: "ZENDESK_EMAIL"
-    required: true
-    default: "maria.pereira@eteg.com.br"
 
 runs:
   using: "node16"
