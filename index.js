@@ -37,10 +37,10 @@ async function run() {
     shell.echo(`🔎 Building & Validating...`);
     await exec.exec('yarn install');
     await exec.exec(`yarn --cwd ${path} build:${env}`);
-    await exec.exec(`zcli apps:validate ${path}`);
-
+    
     if(fs.existsSync(`${path}/zcli.apps.config.json`)) {
       shell.echo(`🚀 Deploying an existing application...`);
+      await exec.exec(`zcli apps:validate ${path}`);
       await exec.exec(`zcli apps:update ${path}`);
     }
     else {
