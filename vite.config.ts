@@ -2,7 +2,7 @@ import { defineConfig, loadEnv } from "vite";
 import rollupPluginCopy from "rollup-plugin-copy";
 import react from "@vitejs/plugin-react";
 import tsconfigPaths from "vite-tsconfig-paths";
-
+import generateFile from 'vite-plugin-generate-file';
 // https://vitejs.dev/config/
 export default ({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
@@ -39,6 +39,15 @@ export default ({ mode }) => {
           },
         ],
       }),
+      generateFile([
+        {
+          type: 'json',
+          output: '../zcli.apps.config.json',
+          data: {
+            app_id: Number(env.VITE_APP_ID),
+          },
+        },
+      ]),
     ],
   });
 };
