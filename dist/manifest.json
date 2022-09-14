@@ -1,9 +1,9 @@
 {
-  "name": "app-mt-deploy",
+  "name": "app-teste-deploy",
   "author": {
-    "name": "MT - Pipeline",
-    "email": "dev-zendesk@eteg.com.br",
-    "url": "https://www.pipeline.com.br"
+    "name": "Teste",
+    "email": "maria.pereira@eteg.com.br",
+    "url": "https://www.teste.com.br"
   },
   "defaultLocale": "en",
   "private": true,
