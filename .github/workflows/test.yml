@@ -20,9 +20,9 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      ZENDESK_SUBDOMAIN: "sejadigitalf21648233634"
-      ZENDESK_API_TOKEN: "Qo4KjW6PAjMWNHw9q2gjjyI9JcJTF9ImY9a4Dvbg"
-      ZENDESK_EMAIL: "maria.pereira@eteg.com.br"
+      ZENDESK_SUBDOMAIN: "d3vetegteste1612456441"
+      ZENDESK_API_TOKEN: "y8VAXH1PStmwOJlV0T8vH1YduA26XyaQZITFbjcI"
+      ZENDESK_EMAIL: "dev-zendesk@eteg.com.br"
 
     steps:
       - uses: actions/checkout@v3

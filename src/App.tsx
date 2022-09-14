@@ -13,7 +13,7 @@ function App() {
           className='App-logo'
           alt='logo'
         />
-        <p>Rod ao contrário é Dor.</p>
+        <p>TESTE ZCLIIIII</p>
         <p>
           <button type='button' onClick={() => setCount((count) => count + 1)}>
             count is: {count}
