@@ -2,7 +2,7 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 const exec = require('@actions/exec');
 const shell = require('shelljs');
-const fs = require('fs');
+// const fs = require('fs');
 
 async function run() {
   try {
@@ -40,15 +40,15 @@ async function run() {
 
     await exec.exec(`yarn --cwd ${path} build:${env}`);
     shell.echo(`🔎 TEEESTE...`);
-    if(fs.existsSync(`${path}/zcli.apps.config.json`)) {
-      shell.echo(`🚀 Deploying an existing application...`);
-      await exec.exec(`zcli apps:validate ${path}`);
-      await exec.exec(`zcli apps:update ${path}`);
-    }
-    else {
-      shell.echo(`🚀 Deploying a new application....`);
-      await exec.exec(`zcli apps:create ${path} && mv ${path}/zcli.apps.config.json ./`);
-    }
+    shell.echo(`🚀 Deploying an existing application...`);
+    await exec.exec(`zcli apps:validate ${path}`);
+    await exec.exec(`zcli apps:update ${path}`);
+    // if(fs.existsSync(`${path}/zcli.apps.config.json`)) {
+    // }
+    // else {
+    //   shell.echo(`🚀 Deploying a new application...`);
+    //   await exec.exec(`zcli apps:create ${path}`);
+    // }
 
     shell.echo(`🎉 Job has been finished`);
 

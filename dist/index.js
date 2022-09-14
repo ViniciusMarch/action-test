@@ -18163,7 +18163,7 @@ const core = __nccwpck_require__(2186);
 const github = __nccwpck_require__(5438);
 const exec = __nccwpck_require__(1514);
 const shell = __nccwpck_require__(3516);
-const fs = __nccwpck_require__(7147);
+// const fs = require('fs');
 
 async function run() {
   try {
@@ -18201,15 +18201,15 @@ async function run() {
 
     await exec.exec(`yarn --cwd ${path} build:${env}`);
     shell.echo(`🔎 TEEESTE...`);
-    if(fs.existsSync(`${path}/zcli.apps.config.json`)) {
-      shell.echo(`🚀 Deploying an existing application...`);
-      await exec.exec(`zcli apps:validate ${path}`);
-      await exec.exec(`zcli apps:update ${path}`);
-    }
-    else {
-      shell.echo(`🚀 Deploying a new application....`);
-      await exec.exec(`zcli apps:create ${path} && mv ${path}/zcli.apps.config.json ./`);
-    }
+    shell.echo(`🚀 Deploying an existing application...`);
+    await exec.exec(`zcli apps:validate ${path}`);
+    await exec.exec(`zcli apps:update ${path}`);
+    // if(fs.existsSync(`${path}/zcli.apps.config.json`)) {
+    // }
+    // else {
+    //   shell.echo(`🚀 Deploying a new application...`);
+    //   await exec.exec(`zcli apps:create ${path}`);
+    // }
 
     shell.echo(`🎉 Job has been finished`);
 
